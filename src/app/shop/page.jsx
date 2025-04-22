@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 
 const ShopClient = dynamic(() => import('./ShopClient'), { ssr: false });
