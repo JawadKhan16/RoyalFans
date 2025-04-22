@@ -5,6 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+export const dynamic = 'force-dynamic'; // 🔧 Prevent prerendering error on Netlify
+
 const allProducts = [
   { name: 'Fans', category: 'Fan', image: '/Shop/fans.webp', description: 'Powerful and silent ceiling fan.' },
   { name: 'Coolers', category: 'Cooler', image: '/Shop/cooler.webp', description: 'Energy-efficient air cooler.' },
@@ -13,7 +15,7 @@ const allProducts = [
 ];
 
 const ShopPage = () => {
-  const searchParams = useSearchParams({ suspense: false }); // ✅ Fixed suspense issue
+  const searchParams = useSearchParams({ suspense: false });
   const search = searchParams.get('search')?.toLowerCase();
   const [filtered, setFiltered] = useState(allProducts);
 
