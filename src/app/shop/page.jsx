@@ -13,7 +13,7 @@ const allProducts = [
 ];
 
 const ShopPage = () => {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams({ suspense: false }); // ✅ Fixed suspense issue
   const search = searchParams.get('search')?.toLowerCase();
   const [filtered, setFiltered] = useState(allProducts);
 
