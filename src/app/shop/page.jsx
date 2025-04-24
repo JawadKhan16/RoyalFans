@@ -2,8 +2,8 @@
 
 import dynamic from 'next/dynamic';
 
-const ShopClient = dynamic(() => import('./ShopClient'), { ssr: false });
+const Shop = dynamic(() => import('./Shop'), { ssr: false });
 
 export default function Page() {
-  return <ShopClient />;
+  return <Shop/>;
 }

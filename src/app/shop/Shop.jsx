@@ -12,7 +12,7 @@ const allProducts = [
   { name: 'Mixers', category: 'Mixer', image: '/Shop/mixer.jpg', description: 'Durable mixer grinder.' },
 ];
 
-export default function ShopClient() {
+export default function Shop() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search')?.toLowerCase();
   const [filtered, setFiltered] = useState(allProducts);
