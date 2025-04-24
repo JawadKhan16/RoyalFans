@@ -4,26 +4,57 @@ const allProducts = [
       name: 'Ceiling Fan',
       slug: 'ceiling-fan',
       category: 'Fan',
-      image: '/Products/Fans/fan1.jpg',
-      description: 'Powerful and silent ceiling fan.',
-      price: 'Rs. 1499'
+      image: '/Products/Fans/fan1.webp',
+      description: 'Bajaj Semi Deco 1200mm 3 Blade Energy Efficient Ceiling Fan (Reliable Operation, Mid Buff)',
+      price: 'Rs. 2,300',
+      brand: 'Bajaj'
     },
     {
       name: 'Tower Fan',
       slug: 'tower-fan',
       category: 'Fan',
       image: '/Products/Fans/fan2.webp',
-      description: 'Sleek design tower fan with remote.',
-      price: 'Rs. 2000'
+      description: 'Usha 5000 Series Bladeless 2230 m3/hr Air Delivery Tower Fan with Remote (Quiet Sleep mode, Black)',
+      price: 'Rs. 8,999',
+      brand: 'Usha'
     },
     {
       name: 'Wall Fan',
       slug: 'wall-fan',
       category: 'Fan',
-      image: '/Products/Fans/fan3.jpg',
-      description: 'Adjustable wall-mounted fan.',
-      price: 'Rs. 1799'
+      image: '/Products/Fans/fan3.webp',
+      description: 'Havells ist Air Flo 400mm 3 Blade Inverter Technology Wall Mounted Fan (Easy Tilt, Light Blue)',
+      price: 'Rs. 2,300',
+      brand: 'Havells'
     },
+    {
+      name: 'Mini Fan',
+      slug: 'mini-fan',
+      category: 'Fan',
+      image: '/Products/Fans/fan4.webp',
+      description: 'BAJAJ Pygmy Mini 110mm 3 Blade Rechargeable Personal Fan with 1800 mAh Battery (Silent Operation, White Smoke)',
+      price: 'Rs. 1,149',
+      brand: 'Bajaj'
+    },
+    {
+      name: 'Celling Fan',
+      slug: 'celling-fan',
+      category: 'Fan',
+      image: '/Products/Fans/fan5.webp',
+      description: 'Croma AF2093 5 Star 1200mm 3 Blade BLDC Motor Ceiling Fan with Remote (Energy Efficient, Smoke Brown)',
+      price: 'Rs. 3,199',
+      brand: 'Croma'
+    },
+    {
+      name: 'Table Fan',
+      slug: 'table-fan',
+      category: 'Fan',
+      image: '/Products/Fans/fan6.webp',
+      description: 'USHA Mist Air Flo 400mm 3 Blade Inverter Technology Table Fan (Durable Design, Light Blue)',
+      price: 'Rs. 2,499',
+      brand: 'Usha'
+    },
+    
   
     // COOLERS
     {
@@ -31,50 +62,111 @@ const allProducts = [
       slug: 'desert-cooler',
       category: 'Cooler',
       image: '/Products/Coolers/cooler1.webp',
-      description: 'High-capacity desert cooler.',
-      price: 'Rs. 3499'
+      description: 'Crompton Sumo 75 XL 75 Litres Desert Air Cooler with i-Pure Technology (Powerful +Air Fan, White).',
+      price: 'Rs. 12,499',
+      brand: 'Crompton'
     },
     {
       name: 'Personal Cooler',
       slug: 'personal-cooler',
       category: 'Cooler',
-      image: '/Products/Coolers/cooler2.jpg',
-      description: 'Compact personal air cooler.',
-      price: 'Rs. 2899'
+      image: '/Products/Coolers/cooler2.webp',
+      description: 'Orient HiFLO 40 Litres Room Air Cooler with i-Pure Technology (Cool Flow Dispenser, Light Grey).',
+      price: 'Rs. 6,399',
+      brand: 'Orient'
     },
     {
       name: 'Window Cooler',
       slug: 'window-cooler',
       category: 'Cooler',
       image: '/Products/Coolers/cooler3.webp',
-      description: 'Space-saving window air cooler.',
-      price: 'Rs. 3199'
+      description: 'Bajaj Altima-I 70 Litres Desert Air Cooler with Inverter Compatible (Thermal Overload Protection, White & Champagne Gold)',
+      price: 'Rs. 11,869',
+      brand: 'Bajaj'
     },
-  
+    {
+      name: 'Desert Air Cooler',
+      slug: 'desert-air-cooler',
+      category: 'Cooler',
+      image: '/Products/Coolers/cooler4.webp',
+      description: 'HAVELLS Convertible 80 Litres Desert Air Cooler with Metal Blade Fan (Powerful Air Delivery, White & Grey)',
+      price: 'Rs. 11,869',
+      brand: 'Havells'
+    },
+    {
+      name: 'Tower Air Cooler',
+      slug: 'tower-air-cooler',
+      category: 'Cooler',
+      image: '/Products/Coolers/cooler5.webp',
+      description: 'Havell Diet 3D 55i+ 55 Litres Room Air Cooler with Magnetic Remote (SMPS Technology, Black)',
+      price: 'Rs. 11,799',
+      brand: 'Havells'
+    },
+    {
+      name: 'Bajaj-Cooler',
+      slug: 'bajaj-cooler',
+      category: 'Cooler',
+      image: '/Products/Coolers/cooler6.webp',
+      description: 'BAJAJ Shield Skive Nios 36 Litres Tower Air Cooler with DuraMarine PRO Pump (Anti Bacterial Hexacool Master, White)',
+      price: 'Rs. 11,799',
+      brand: 'Bajaj'
+    },
+
+
     // WASHING MACHINES
     {
       name: 'Top Load Washer',
       slug: 'top-load-washer',
       category: 'Washing Machine',
-      image: '/Products/wm/wm1.jpg',
-      description: 'Fully automatic top load washer.',
-      price: 'Rs. 10999'
+      image: '/Products/wm/wm1.webp',
+      description: 'SAMSUNG 7 kg 5 Star Fully Automatic Top Load Washing Machine (WA70BG4441BYTL, Diamond Drum, Lavender Gray)',
+      price: 'Rs. 19,200',
+      brand: 'Samsung'
     },
     {
       name: 'Front Load Washer',
       slug: 'front-load-washer',
       category: 'Washing Machine',
       image: '/Products/wm/wm2.webp',
-      description: 'Efficient front load washer with inverter motor.',
-      price: 'Rs. 13499'
+      description: 'Croma 7 kg 5 Star Inverter Fully Automatic Front Load Washing Machine (2025 Model, Built in heater, Silver Grey)',
+      price: 'Rs. 26,800',
+      brand: 'Croma'
     },
     {
       name: 'Semi Automatic Washer',
       slug: 'semi-automatic-washer',
       category: 'Washing Machine',
       image: '/Products/wm/wm3.webp',
-      description: 'Budget-friendly semi automatic washer.',
-      price: 'Rs. 8499'
+      description: 'LG 7.5 kg 5 Star Semi Automatic Washing Machine with 3 Wash Programs (GLWMS75CVGEL, Grey)',
+      price: 'Rs. 12,499',
+      brand: 'Lg'
+    },
+    {
+      name: 'Top Load Washer',
+      slug: 'top-load',
+      category: 'Washing Machine',
+      image: '/Products/wm/wm4.webp',
+      description: 'Whirlpool 7.5 kg 5 Star Fully Automatic Top Load Washing Machine (StainWash Pro, 31631, In-built Heater, Grey)',
+      price: 'Rs. 18,699',
+      brand: 'Whirlpool'
+    },
+    {
+      name: 'Front Load Washer',
+      slug: 'front-load',
+      category: 'Washing Machine',
+      image: '/Products/wm/wm5.webp',
+      description: 'Whirlpool 7 kg 5 Star Inverter Fully Automatic Front Load Washing Machine (XPERT CARE STEAM, XS7012BYM53E, In-built Heater, Midnight Grey)',
+      price: 'Rs. 29,990',
+      brand: 'Whirlpool'
+    },
+    {
+      name: 'Front Load Washer',
+      slug: 'front-load-wash',
+      category: 'Washing Machine',
+      image: '/Products/wm/wm6.webp',
+      description: 'SAMSUNG 12 kg 5 Star Wi-Fi Inverter Fully Automatic Front Load Washing Machine (WW12DG5B24ABTL, AI EcoBubble, Black)',
+      price: 'Rs. 46,000',
+      brand: 'Samsung'
     },
   
     // MIXERS
@@ -84,7 +176,8 @@ const allProducts = [
       category: 'Mixer',
       image: '/Products/Mixers/mixer1.jpg',
       description: 'Durable mixer with 3 stainless steel jars.',
-      price: 'Rs. 2599'
+      price: 'Rs. 2599',
+      brand: 'Croma'
     },
     {
       name: 'Juicer Mixer Grinder',
@@ -92,7 +185,8 @@ const allProducts = [
       category: 'Mixer',
       image: '/Products/Mixers/mixer2.jpg',
       description: 'Juicer and grinder combo with powerful motor.',
-      price: 'Rs. 2999'
+      price: 'Rs. 2999',
+      brand: 'Philips'
     },
     {
       name: 'Mini Mixer',
@@ -100,7 +194,8 @@ const allProducts = [
       category: 'Mixer',
       image: '/Products/Mixers/mixer3.jpg',
       description: 'Compact mixer for quick use.',
-      price: 'Rs. 1999'
+      price: 'Rs. 1999',
+      brand: 'Prestige'
     }
   ];
   
