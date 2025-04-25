@@ -89,7 +89,7 @@ const CategoryPage = () => {
                   <h2 className="text-xl font-semibold">{product.name}</h2>
                   <p className="text-sm text-gray-300">{product.description}</p>
                   <p className="text-sm">{product.brand}</p>
-                  <h2 className="font-semibold">{product.price}</h2>
+                  <h2 className="font-semibold">Rs. {product.price}</h2>
                 </div>
               </motion.div>
             </Link>

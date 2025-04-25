@@ -1,11 +1,15 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import allProducts from '@/data/allProducts';
 import Link from 'next/link';
+import { useCart } from '@/components/pages/cart/CartContext'; 
 
 const ProductDetail = () => {
   const { slug } = useParams();
+  const router = useRouter();
+  const { addToCart } = useCart(); // use context
+
   const product = allProducts.find((p) => p.slug === slug);
 
   if (!product) {
@@ -15,6 +19,11 @@ const ProductDetail = () => {
   const relatedProducts = allProducts.filter(
     (p) => p.category === product.category && p.slug !== product.slug
   );
+
+  const handleAddToCart = () => {
+    addToCart(product); //use the context method
+    router.push('/cart'); 
+  };
 
   return (
     <section className="bg-black text-white px-6 py-24 md:px-12 min-h-screen">
@@ -27,23 +36,25 @@ const ProductDetail = () => {
             className="w-full h-auto max-h-[400px] object-contain rounded-xl"
           />
         </div>
-          <div className="text-left">
-            <h1 className="text-3xl font-bold text-[#d2a679] mb-4">{product.name}</h1>
-            <p className="text-gray-300 mb-4">{product.description}</p>
-            <p className="text-sm ">{product.brand}</p>
-            <p className="text-lg font-semibold mb-6">{product.price}</p>
+        <div className="text-left">
+          <h1 className="text-3xl font-bold text-[#d2a679] mb-4">{product.name}</h1>
+          <p className="text-gray-300 mb-4">{product.description}</p>
+          <p className="text-sm">{product.brand}</p>
+          <p className="text-lg font-semibold mb-6">{product.price}</p>
 
-        <div className="flex gap-4">
+          <div className="flex gap-4">
             <button className="bg-[#d2a679] text-black px-6 py-2 rounded hover:bg-[#c89b5c] transition">
-                Buy Now
+              Buy Now
             </button>
-            <button className="bg-transparent border border-[#d2a679] text-[#d2a679] px-6 py-2 rounded hover:bg-[#d2a679] hover:text-black transition">
-               Add to Cart
+            <button
+              onClick={handleAddToCart}
+              className="bg-transparent border border-[#d2a679] text-[#d2a679] px-6 py-2 rounded hover:bg-[#d2a679] hover:text-black transition"
+            >
+              Add to cart
             </button>
           </div>
         </div>
-    </div>
-
+      </div>
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
