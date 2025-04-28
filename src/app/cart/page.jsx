@@ -7,7 +7,7 @@ import CartTotal from '@/components/pages/cart/CartTotal';
 const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
 
-  // helper to clean and get price
+  // helpess to clean and get price
   const getNumericPrice = (price) => {
     if (typeof price === 'string') {
       return parseFloat(price.replace(/[^0-9.]/g, '')) || 0;

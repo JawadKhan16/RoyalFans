@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // 🔁 Listen to localStorage changes in other tabs/components
+  //Lissten to localStorage changes in other tabs/components
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === 'cart') {

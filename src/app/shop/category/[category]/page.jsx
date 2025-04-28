@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import allProducts from '@/data/allProducts';
+import allProducts from '@/data/products/allProducts';
 import Link from 'next/link';
 import FilterBar from '@/components/shop/FilterBar';
 
@@ -73,23 +73,30 @@ const CategoryPage = () => {
           filtered.map((product, index) => (
             <Link href={`/shop/product/${product.slug}`} key={index}>
               <motion.div
-                 className="bg-[#3b2f2f] rounded-xl overflow-hidden shadow hover:scale-105 transition-transform p-4 flex flex-col items-center relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="bg-[#3b2f2f] rounded-xl overflow-hidden shadow hover:scale-105 transition-transform p-4 flex flex-col items-center relative"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-            <div className=" w-full h-[240px] rounded-md flex items-center justify-center">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="max-h-[200px] object-contain"
-            />
-            </div>
-                <div className="p-4 text-left ">
+                <div className="w-full h-[240px] rounded-md flex items-center justify-center">
+                  <img
+                    src={product.colors[0].image}
+                    alt={product.name}
+                    className="max-h-[200px] object-contain"
+                  />
+                </div>
+                <div className="p-4 text-left">
                   <h2 className="text-xl font-semibold">{product.name}</h2>
                   <p className="text-sm text-gray-300">{product.description}</p>
                   <p className="text-sm">{product.brand}</p>
-                  <h2 className="font-semibold">Rs. {product.price}</h2>
+
+                  {/* Price and MRP */}
+                  <div className="flex gap-2 items-center">
+                    {product.mrp && (
+                      <span className="text-sm text-gray-500 line-through">Rs. {product.mrp}</span>
+                    )}
+                    <h2 className="font-semibold">Rs. {product.price}</h2>
+                  </div>
                 </div>
               </motion.div>
             </Link>
