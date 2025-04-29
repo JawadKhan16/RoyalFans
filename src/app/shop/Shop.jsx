@@ -7,9 +7,11 @@ import { motion } from 'framer-motion';
 
 const allProducts = [
   { name: 'Fans', category: 'Fan', image: '/Shop/fans.webp', description: 'Powerful and silent ceiling fan.' },
+  { name: 'Lights', category: 'Light', image: '/Shop/Light.webp', description: 'LED, Ceiling, Strip Lights.' },
   { name: 'Coolers', category: 'Cooler', image: '/Shop/cooler.webp', description: 'Energy-efficient air cooler.' },
   { name: 'Washing Machine', category: 'Washing Machine', image: '/Shop/wm.webp', description: 'Smart wash technology.' },
   { name: 'Mixers', category: 'Mixer', image: '/Shop/mixer.jpg', description: 'Durable mixer grinder.' },
+  
 ];
 
 export default function Shop() {
@@ -31,7 +33,7 @@ export default function Shop() {
         {search ? `Results for "${search}"` : 'All Products'}
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {filtered.length > 0 ? filtered.map((product, index) => (
           <motion.div
             key={index}
