@@ -38,7 +38,7 @@ const ProductDetail = () => {
           <img
             src={selectedColor.image} // Show the selected color image
             alt={product.name}
-            className="w-full h-auto max-h-[400px] object-contain rounded-xl"
+            className="w-full h-auto max-h-[400px] object-contain rounded-xl "
           />
         </div>
         <div className="text-left">
@@ -95,19 +95,27 @@ const ProductDetail = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {relatedProducts.map((item) => (
               <Link key={item.slug} href={`/shop/product/${item.slug}`}>
-                <div className="bg-[#3b2f2f] rounded-xl overflow-hidden shadow hover:scale-105 transition-transform p-4 flex flex-col items-center relative">
+              <div className="rounded-xl overflow-hidden shadow hover:scale-105 transition-transform flex flex-col items-center relative bg-[#3b2f2f]">
+                
+                {/* Off-white image section */}
+                <div className="w-full h-[260px] bg-[#f9f9f9] flex items-center justify-center">
                   <img
-                    src={item.colors[0].image} // Show the first color's image
+                    src={item.colors[0].image}
                     alt={item.name}
                     className="max-h-[200px] object-contain"
                   />
-                  <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
-                  <p className="text-sm text-gray-300">{item.description}</p>
-
-                  <p className="text-sm">Brand: {item.brand}</p>
-                  <p className="font-semibold">Rs. {item.price}</p>
                 </div>
-              </Link>
+            
+                {/* Text section on brown background */}
+                <div className="p-4 w-full text-left bg-[#3b2f2f]">
+                  <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+                  <p className="text-sm text-gray-300">{item.description}</p>
+                  <p className="text-sm text-white">Brand: {item.brand}</p>
+                  <p className="font-semibold text-white">Rs. {item.price}</p>
+                </div>
+              </div>
+            </Link>
+            
             ))}
           </div>
         </div>

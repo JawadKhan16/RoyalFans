@@ -8,9 +8,13 @@ import { motion } from 'framer-motion';
 const allProducts = [
   { name: 'Fans', category: 'Fan', image: '/Shop/fans.webp', description: 'Powerful and silent ceiling fan.' },
   { name: 'Lights', category: 'Light', image: '/Shop/Light.webp', description: 'LED, Ceiling, Strip Lights.' },
+  { name: 'Geysers', category: 'Geyser', image: '/Shop/Geyser.jpg', description: 'Water Geysers.' },
+  { name: 'Kitchen Appliances', category: 'kitchen', image: '/Shop/mixer.jpg', description: 'Durable Kitchen Appliacnces.' },
   { name: 'Coolers', category: 'Cooler', image: '/Shop/cooler.webp', description: 'Energy-efficient air cooler.' },
   { name: 'Washing Machine', category: 'Washing Machine', image: '/Shop/wm.webp', description: 'Smart wash technology.' },
-  { name: 'Mixers', category: 'Mixer', image: '/Shop/mixer.jpg', description: 'Durable mixer grinder.' },
+  { name: 'Irons', category: 'Iron', image: '/Shop/iron.jpg', description: 'Irons.' },
+  { name: 'Other-Products', category: 'other', image: '/Shop/other.webp', description: 'Other Products' },
+
   
 ];
 

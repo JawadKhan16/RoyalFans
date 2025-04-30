@@ -73,32 +73,36 @@ const CategoryPage = () => {
           filtered.map((product, index) => (
             <Link href={`/shop/product/${product.slug}`} key={index}>
               <motion.div
-                className="bg-[#3b2f2f] rounded-xl overflow-hidden shadow hover:scale-105 transition-transform p-4 flex flex-col items-center relative"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <div className="w-full h-[240px] rounded-md flex items-center justify-center">
-                  <img
-                    src={product.colors[0].image}
-                    alt={product.name}
-                    className="max-h-[200px] object-contain"
-                  />
-                </div>
-                <div className="p-4 text-left">
-                  <h2 className="text-xl font-semibold">{product.name}</h2>
-                  <p className="text-sm text-gray-300">{product.description}</p>
-                  <p className="text-sm">{product.brand}</p>
+  className="rounded-xl overflow-hidden shadow hover:scale-105 transition-transform flex flex-col items-center relative bg-[#3b2f2f]"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3, delay: index * 0.1 }}
+>
+  
+  <div className="w-full h-[300px] bg-[#f9f9f9] rounded-t-xl flex items-center justify-center">
+    <img
+      src={product.colors[0].image}
+      alt={product.name}
+      className="max-h-[260px] object-contain"
+    />
+  </div>
 
-                  {/* Price and MRP */}
-                  <div className="flex gap-2 items-center">
-                    {product.mrp && (
-                      <span className="text-sm text-gray-500 line-through">Rs. {product.mrp}</span>
-                    )}
-                    <h2 className="font-semibold">Rs. {product.price}</h2>
-                  </div>
-                </div>
-              </motion.div>
+  {/* Text container,brown background */}
+  <div className="p-4 text-left w-full bg-[#3b2f2f]">
+    <h2 className="text-xl font-semibold text-white">{product.name}</h2>
+    <p className="text-sm text-gray-300">{product.description}</p>
+    <p className="text-sm text-white">{product.brand}</p>
+
+    {/* Price and MRP */}
+    <div className="flex gap-2 items-center mt-2">
+      {product.mrp && (
+        <span className="text-sm text-gray-400 line-through">Rs. {product.mrp}</span>
+      )}
+      <h2 className="font-semibold text-white">Rs. {product.price}</h2>
+    </div>
+  </div>
+</motion.div>
+
             </Link>
           ))
         ) : (
