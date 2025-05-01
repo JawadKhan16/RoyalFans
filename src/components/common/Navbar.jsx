@@ -39,6 +39,7 @@ const Navbar = () => {
         {/* Mobile Menu and Search Icon */}
         <div className="md:hidden flex items-center gap-3">
           {/* Cart Icon */}
+          
           <Link href="/cart" className="relative">
             <FiShoppingCart size={24} />
             {cartCount > 0 && (

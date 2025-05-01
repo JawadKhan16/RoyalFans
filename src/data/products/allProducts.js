@@ -1,5 +1,6 @@
 import FanProducts from './Fans/CromptonFans';
 import AtomBergFans from './Fans/AtomBergFans';
+import OtherFans from './Fans/OtherFans';
 
 import CromptonLights from './Lights/CromptonLights';
 import SturLite from './Lights/SturLite';
@@ -15,6 +16,7 @@ import KitchenProducts from '../HomeAplliances/Kitchen/KitchenProducts';
 const allProducts = [
   ...FanProducts,
   ...AtomBergFans,
+  ...OtherFans,
   ...CoolerProducts,
   ...WashingMachineProducts,
   ...CromptonLights,
