@@ -1,6 +1,6 @@
 'use client'
 
-import Contact from '@/components/pages/contact/Contact';
+import Contact from '@/components/pages/contact/contact';
 import Hero from '@/components/pages/contact/Hero'
 
 const ContactPage = () => {
