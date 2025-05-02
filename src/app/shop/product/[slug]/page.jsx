@@ -73,7 +73,10 @@ const ProductDetail = () => {
                   </div>
 
           <div className="flex gap-4">
-            <button className="bg-[#d2a679] text-black px-6 py-2 rounded hover:bg-[#c89b5c] transition">
+            <button
+            onClick={handleAddToCart}
+            className="bg-[#d2a679] text-black px-6 py-2 rounded hover:bg-[#c89b5c] transition">
+              
               Buy Now
             </button>
             <button
